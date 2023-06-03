@@ -2,9 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_firebase/firebase_options.dart';
-import 'package:flutter_firebase/src/binding/init_binding.dart';
 import 'package:flutter_firebase/src/view/app.dart';
-import 'package:get/get.dart';
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
@@ -18,13 +16,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
         theme: ThemeData(
             backgroundColor: Colors.white,
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.white,
             )),
-        initialBinding: InitBinding(),
         home: const App());
   }
 }
